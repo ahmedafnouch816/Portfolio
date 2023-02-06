@@ -1,0 +1,571 @@
+/* Styleswitcher - box */
+
+#style-switcher {
+	position: fixed;
+	top: 0;
+	right: -175px;
+	width: 175px;
+	margin-top: 160px;
+	z-index: 2200;
+	color: #333;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	-webkit-border-bottom-left-radius: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+/* Styleswitcher - trigger */
+
+#style-switcher .ss-toggle {
+	position: absolute;
+	top: 0;
+	left: -36px;
+	width: 36px;
+	height: 66px;
+	display:block;
+	color: rgb(255,255,255);
+	text-align: center;
+	cursor: pointer;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+}
+
+
+
+#style-switcher .ss-toggle i {
+	margin-top: 26px;
+	font-size: 18px;
+}
+
+/* Styleswitcher - options */
+
+#style-switcher ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#style-switcher .ss-label {
+	display: block;
+	font-weight: 500;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 12px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+#color-switcher > li:not(:last-child) {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+#color-switcher a {
+	position: relative;
+	display: block;
+	padding: 12px 12px 12px 42px;
+	line-height: 1;
+}
+
+#color-switcher a:before {
+	position: absolute;
+	top: 10px;
+	left: 12px;
+	display: block;
+	width: 21px;
+	height: 21px;
+	content: ' ';
+	border: 1px solid #e6e6e6;
+	border-radius: 50%;
+}
+
+#color-switcher > li > a > span {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	margin: 0 1px;
+}
+
+#color-switcher a:after {
+	position: absolute;
+	top: 15px;
+	left: 17px;
+	font-family: "FontAwesome";
+	font-weight: 100;
+	font-size: 15px;
+	content:  "\f00c";
+	color: #282828;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	-webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+}
+
+#color-switcher a.active:after {
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+}
+
+
+
+
+
+.containerr {
+    /* padding: 5rem; */
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 130px;
+}
+
+
+
+
+
+
+
+.btn {
+    border: none;
+    /* padding: 12px 16px; */
+    background-color: #182C61;
+    cursor: pointer;
+    color: #CAD3C8;
+    /* font-size: 0.8rem; */
+    font-family: sans-serif;
+    /* border-radius: 4px; */
+    transition: 350ms;
+    margin: 10px;
+}
+
+.btn:hover {
+	color: #CAD3C8;
+	background-color: #8395a7;
+}
+
+.btn:focus{
+	outline: none;
+	background-color: #12b2e3;
+	color: white;
+	font-weight: bold;
+}
+
+.btn:active {
+	background-color: #12b2e3;
+	color: white;
+}
+
+@keyframes showing{
+	from{
+		opacity: 0;
+	}to{
+		opacity: 1;
+	}
+}
+
+
+
+
+.main-container{
+    position: relative;
+    width: 90%;
+}
+
+.static-container{
+    display: inline-block;
+    margin: 20px;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 900;
+    width: 390px;
+    
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-size: 300%;
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+    animation: color 3s infinite alternate ease-in;
+}
+
+
+.moving-text-container{
+    display: inline-block;
+    height: 60px;
+    width: 300px;
+    backface-visibility: hidden;
+    
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    
+    position: absolute;
+    
+    
+    overflow: hidden;
+}
+
+.moving-text-container > p{
+    padding: 0;
+    margin: 5px;
+}
+
+.moving-text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    position: absolute;
+    animation: upDown 7s infinite;
+}
+
+@keyframes upDown{
+    
+    0% {
+       top: 5px; 
+    }
+    
+    10%{
+        top: 5px;
+    }
+    
+    20%{
+        top: -50px;
+    }
+    
+    30%{
+        top: -50px;
+    }
+    
+    40%{
+        top: -105px;
+    }
+    
+    50%{
+        top: -105px;
+    }
+    
+     60%{
+        top: -160px;
+    }
+    
+    70%{
+        top: -160px;
+    }
+    
+    80%{
+        top: 30px;
+    }
+    
+    85% {
+        top: 5px; 
+    }
+    
+    100% {
+        top: 5px; 
+    }
+    
+}
+
+@keyframes color{
+    
+    0% {
+        background-position: left;
+    }
+    
+    100% {
+        background-position: right;
+    }
+}
+  
+/******************************************************************/
+  
+.glowing {
+	position: relative;
+	min-width: 700px;
+	height: 550px;
+	margin: -150px;
+	transform-origin: right;
+	animation: colorChange 5s linear infinite;
+  }
+  
+  .glowing:nth-child(even) {
+	transform-origin: left;
+  }
+  
+  @keyframes colorChange {
+	0% {
+	  filter: hue-rotate(0deg);
+	  transform: rotate(0deg);
+	}
+	100% {
+	  filter: hue-rotate(360deg);
+	  transform: rotate(360deg);
+	}
+  }
+  
+  .glowing span {
+	position: absolute;
+	top: calc(80px * var(--i));
+	left: calc(80px * var(--i));
+	bottom: calc(80px * var(--i));
+	right: calc(80px * var(--i));
+  }
+  
+  .glowing span::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -8px;
+	width: 15px;
+	height: 15px;
+	background: #f00;
+	border-radius: 50%;
+  }
+  
+  .glowing span:nth-child(3n + 1)::before {
+	background: rgba(134,255,0,1);
+	box-shadow: 0 0 20px rgba(134,255,0,1),
+	  0 0 40px rgba(134,255,0,1),
+	  0 0 60px rgba(134,255,0,1),
+	  0 0 80px rgba(134,255,0,1),
+	  0 0 0 8px rgba(134,255,0,.1);
+  }
+  
+  .glowing span:nth-child(3n + 2)::before {
+	background: rgba(255,214,0,1);
+	box-shadow: 0 0 20px rgba(255,214,0,1),
+	  0 0 40px rgba(255,214,0,1),
+	  0 0 60px rgba(255,214,0,1),
+	  0 0 80px rgba(255,214,0,1),
+	  0 0 0 8px rgba(255,214,0,.1);
+  }
+  
+  .glowing span:nth-child(3n + 3)::before {
+	background: rgba(0,226,255,1);
+	box-shadow: 0 0 20px rgba(0,226,255,1),
+	  0 0 40px rgba(0,226,255,1),
+	  0 0 60px rgba(0,226,255,1),
+	  0 0 80px rgba(0,226,255,1),
+	  0 0 0 8px rgba(0,226,255,.1);
+  }
+  
+  .glowing span:nth-child(3n + 1) {
+	animation: animate 10s alternate infinite;
+  }
+  
+  .glowing span:nth-child(3n + 2) {
+	animation: animate-reverse 3s alternate infinite;
+  }
+  
+  .glowing span:nth-child(3n + 3) {
+	animation: animate 8s alternate infinite; 
+  }
+  
+  @keyframes animate {
+	0% {
+	  transform: rotate(180deg);
+	}
+	50% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  @keyframes animate-reverse {
+	0% {
+	  transform: rotate(360deg);
+	}
+	
+	50% {
+	  transform: rotate(180deg);
+	}
+	
+	100% {
+	  transform: rotate(0deg);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* -----------------------------------
+		Gallery Section
+  --------------------------------------*/
+
+  .portfolio-section h2 {
+	font-size: 28px;
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+  }
+  .portfolio-menu {
+	text-align: center;
+  }
+  .control {
+    border-radius: 10px;
+    background: #3aa8db;
+    color: #fff;
+    padding: 5px 10px;
+    border: none; 
+    /* border-radius: 3px; */
+    margin: 5px;
+    cursor: pointer;
+    -webkit-transition: all 05s ease;
+    -moz-transition: all 05s ease;
+    -ms-transition: all 05s ease;
+    -o-transition: all 05s ease;
+    transition: all 0.5s ease;
+	width: 86px;
+	height: 40px;
+  }
+  .control:hover {
+	background: #343a40;
+  }
+  .mixitup-control-active {
+	color: #fff;
+	background: #343a40;
+  }
+  .fancybox-container button:focus {
+	outline: 0;
+	box-shadow: none;
+  }
+  .portfolio-item {
+	padding-top: 30px;
+  }
+  .pd {
+	padding: 0;
+	padding: 10px;
+  }
+  .pd img {
+	height: 180px;
+	transition: all 0.5s;
+  }
+  .portfolio-overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	visibility: hidden;
+	transition: all 0.5s;
+	transform: scale(0);
+  }
+  .portfolio-overlay p,
+  .portfolio-overlay a {
+	position: relative;
+	z-index: 4;
+  }
+  .portfolio-overlay::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-width: 0;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	transition: 50ms height ease 150ms;
+	z-index: 3;
+  }
+  .portfolio-overlay::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-width: 0;
+	position: absolute;
+	right: 10%;
+	bottom: 10%;
+	transition: 100ms width ease 200ms;
+	z-index: 3;
+  }
+  .portfolio-item:hover .portfolio-overlay::before {
+	width: 80%;
+	height: 80%;
+	border-top: 1px solid #04b6de;
+	border-right: 1px solid #50977f;
+	transition: width 0.1s ease 0.3s, height 0.1s ease 0.5s;
+  }
+  .portfolio-item:hover .portfolio-overlay::after {
+	width: 80%;
+	height: 80%;
+	border-bottom: 1px solid #04b6de;
+	border-left: 1px solid #50977f;
+	transition: width 0.1s ease 0.6s, height 0.1s ease 0.7s;
+  }
+  .portfolio-item li:hover .portfolio-overlay {
+	visibility: visible;
+	transform: scale(1);
+  }
+  .portfolio-overlay .category {
+	margin-top: 70px;
+	margin-bottom: 20px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 500;
+  }
+  .portfolio-overlay .magnify-icon {
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	background: #11b3f3;
+	margin: 0 5px;
+	cursor: pointer;
+	display: inline-block;
+	transition: all 0.25s;
+  }
+  .portfolio-overlay .magnify-icon:hover {
+	background: #000;
+  }
+  .portfolio-overlay .magnify-icon p span i {
+	font-size: 15px;
+	color: #fff;
+	line-height: 40px;
+	cursor: pointer;
+  }
+  
+  /*******Responsive media query******/
+  
+  /* Extra small devices (portrait phones, less than 576px)*/
+  
+#pont{
+	color: white;
+}
+
+.imgd{
+	width: 150%;
+}
+
+
+.lit{
+	color:#3aa8db
+}
