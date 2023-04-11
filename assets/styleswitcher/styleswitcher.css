@@ -443,7 +443,7 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
     -ms-transition: all 05s ease;
     -o-transition: all 05s ease;
     transition: all 0.5s ease;
-	width: 86px;
+	width: 185px;
 	height: 40px;
   }
   .control:hover {
